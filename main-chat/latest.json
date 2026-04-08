@@ -1,0 +1,82 @@
+{
+  "sceneId": "main",
+  "revision": 6,
+  "lastEventOffset": 6,
+  "messages": [
+    {
+      "id": "user-1775636557350",
+      "role": "user",
+      "content": "Make an demo video of our new AI Workflow builder feature. Show Text “Introducing The AI Workflow Builder”\n\nMake it two scenes: one text, and one with screenshot.",
+      "timestamp": 1775636557350,
+      "attachedImages": [
+        "https://raw.githubusercontent.com/renatgabitov/make-an-demo-video-of-our-202604081621/main/uploads/1775636511725-41ad9c19/asset-1.png"
+      ],
+      "attachedComponentReferences": [
+        {
+          "id": "75a53590-e787-420a-b101-e9a9034608c2",
+          "name": "Landing Screenshot Seed",
+          "sourceType": "screenshot",
+          "code": "import React from 'react';\nimport {AbsoluteFill} from 'remotion';\nimport {Icon} from '@iconify/react';\n\nconst cellBorder = '1px solid rgba(236, 222, 189, 0.45)';\n\nconst Cell: React.FC<{\n\tleft: number;\n\ttop: number;\n\twidth: number;\n\theight: number;\n\tchildren?: React.ReactNode;\n}> = ({left, top, width, height, children}) => {\n\treturn (\n\t\t<div\n\t\t\tstyle={{\n\t\t\t\tposition: 'absolute',\n\t\t\t\tleft,\n\t\t\t\ttop,\n\t\t\t\twidth,\n\t\t\t\theight,\n\t\t\t\tborderRight: cellBorder,\n\t\t\t\tborderBottom: cellBorder,\n\t\t\t\tdisplay: 'flex',\n\t\t\t\talignItems: 'center',\n\t\t\t\tjustifyContent: 'center',\n\t\t\t\tboxSizing: 'border-box',\n\t\t\t\tbackground:\n\t\t\t\t\t'linear-gradient(120deg, rgba(255,255,255,0) 32%, rgba(245, 236, 213, 0.18) 32.5%, rgba(255,255,255,0) 33.2%)',\n\t\t\t\tbackgroundSize: '18px 18px',\n\t\t\t}}\n\t\t>\n\t\t\t{children}\n\t\t</div>\n\t);\n};\n\nconst IconWrap: React.FC<{\n\tchildren: React.ReactNode;\n\tsize?: number;\n\topacity?: number;\n}> = ({children, size = 60, opacity = 0.9}) => (\n\t<div\n\t\tstyle={{\n\t\t\twidth: size,\n\t\t\theight: size,\n\t\t\tdisplay: 'flex',\n\t\t\talignItems: 'center',\n\t\t\tjustifyContent: 'center',\n\t\t\topacity,\n\t\t}}\n\t>\n\t\t{children}\n\t</div>\n);\n\nconst FaceLogo: React.FC = () => {\n\treturn (\n\t\t<div\n\t\t\tstyle={{\n\t\t\t\twidth: 160,\n\t\t\t\theight: 160,\n\t\t\t\tborderRadius: '50%',\n\t\t\t\tbackground: 'linear-gradient(180deg, #fffaf0 0%, #fff0cd 100%)',\n\t\t\t\tboxShadow: '0 2px 6px rgba(0,0,0,0.14), inset 0 0 0 2px rgba(30,30,30,0.08)',\n\t\t\t\tposition: 'relative',\n\t\t\t}}\n\t\t>\n\t\t\t<div\n\t\t\t\tstyle={{\n\t\t\t\t\tposition: 'absolute',\n\t\t\t\t\tleft: 30,\n\t\t\t\t\ttop: 48,\n\t\t\t\t\twidth: 34,\n\t\t\t\t\theight: 12,\n\t\t\t\t\tborderTop: '8px solid #133b54',\n\t\t\t\t\tborderLeft: '8px solid #133b54',\n\t\t\t\t\tborderRadius: 8,\n\t\t\t\t\ttransform: 'rotate(45deg)',\n\t\t\t\t}}\n\t\t\t/>\n\t\t\t<div\n\t\t\t\tstyle={{\n\t\t\t\t\tposition: 'absolute',\n\t\t\t\t\tright: 30,\n\t\t\t\t\ttop: 52,\n\t\t\t\t\twidth: 28,\n\t\t\t\t\theight: 10,\n\t\t\t\t\tborderTop: '8px solid #133b54',\n\t\t\t\t\tborderRight: '8px solid #133b54',\n\t\t\t\t\tborderRadius: 8,\n\t\t\t\t\ttransform: 'rotate(-35deg)',\n\t\t\t\t}}\n\t\t\t/>\n\t\t\t<div\n\t\t\t\tstyle={{\n\t\t\t\t\tposition: 'absolute',\n\t\t\t\t\tleft: 72,\n\t\t\t\t\ttop: 40,\n\t\t\t\t\twidth: 12,\n\t\t\t\t\theight: 68,\n\t\t\t\t\tbackground: '#133b54',\n\t\t\t\t\tborderRadius: 8,\n\t\t\t\t\ttransform: 'rotate(20deg)',\n\t\t\t\t}}\n\t\t\t/>\n\t\t\t<div\n\t\t\t\tstyle={{\n\t\t\t\t\tposition: 'absolute',\n\t\t\t\t\tleft: 66,\n\t\t\t\t\ttop: 94,\n\t\t\t\t\twidth: 28,\n\t\t\t\t\theight: 14,\n\t\t\t\t\tborderBottom: '8px solid #133b54',\n\t\t\t\t\tborderRadius: '0 0 20px 20px',\n\t\t\t\t\ttransform: 'rotate(12deg)',\n\t\t\t\t}}\n\t\t\t/>\n\t\t\t<div\n\t\t\t\tstyle={{\n\t\t\t\t\tposition: 'absolute',\n\t\t\t\t\tleft: 60,\n\t\t\t\t\tbottom: 28,\n\t\t\t\t\twidth: 44,\n\t\t\t\t\theight: 22,\n\t\t\t\t\tborderBottom: '8px solid #133b54',\n\t\t\t\t\tborderRadius: '0 0 40px 40px',\n\t\t\t\t\ttransform: 'rotate(8deg)',\n\t\t\t\t}}\n\t\t\t/>\n\t\t</div>\n\t);\n};\n\nexport const ScreenshotRecreation: React.FC = () => {\n\tconst gridLeft = 350;\n\tconst gridTop = 80;\n\tconst colWidths = [140, 210, 210, 265, 300, 140, 140, 140];\n\tconst rowHeights = [142, 140, 142, 128];\n\n\tconst x = [gridLeft];\n\tfor (let i = 0; i < colWidths.length - 1; i++) x.push(x[i] + colWidths[i]);\n\tconst y = [gridTop];\n\tfor (let i = 0; i < rowHeights.length - 1; i++) y.push(y[i] + rowHeights[i]);\n\n\treturn (\n\t\t<AbsoluteFill\n\t\t\tstyle={{\n\t\t\t\tbackground: '#fffefb',\n\t\t\t\tfontFamily: 'Arial, Helvetica, sans-serif',\n\t\t\t\tcolor: '#222',\n\t\t\t\toverflow: 'hidden',\n\t\t\t}}\n\t\t>\n\t\t\t<div\n\t\t\t\tstyle={{\n\t\t\t\t\tposition: 'absolute',\n\t\t\t\t\tinset: 0,\n\t\t\t\t\tbackground:\n\t\t\t\t\t\t'radial-gradient(circle at center, rgba(255,255,255,0) 50%, rgba(246, 242, 233, 0.9) 82%, rgba(245,241,234,1) 100%)',\n\t\t\t\t}}\n\t\t\t/>\n\n\t\t\t<div\n\t\t\t\tstyle={{\n\t\t\t\t\tposition: 'absolute',\n\t\t\t\t\tleft: gridLeft,\n\t\t\t\t\ttop: gridTop,\n\t\t\t\t\twidth: colWidths.reduce((a, b) => a + b, 0),\n\t\t\t\t\theight: rowHeights.reduce((a, b) => a + b, 0),\n\t\t\t\t\tborderLeft: cellBorder,\n\t\t\t\t\tborderTop: cellBorder,\n\t\t\t\t\tboxSizing: 'border-box',\n\t\t\t\t}}\n\t\t\t/>\n\n\t\t\t<Cell left={x[0]} top={y[0]} width={colWidths[0]} height={rowHeights[0]} />\n\t\t\t<Cell left={x[1]} top={y[0]} width={colWidths[1]} height={rowHeights[0]}>\n\t\t\t\t<IconWrap size={72} opacity={0.55}>\n\t\t\t\t\t<Icon icon=\"vscode-icons:file-type-word\" width={60} height={60} />\n\t\t\t\t</IconWrap>\n\t\t\t</Cell>\n\t\t\t<Cell left={x[2]} top={y[0]} width={colWidths[2]} height={rowHeights[0]}>\n\t\t\t\t<IconWrap size={72} opacity={0.5}>\n\t\t\t\t\t<Icon icon=\"vscode-icons:file-type-excel2\" width={58} height={58} />\n\t\t\t\t</IconWrap>\n\t\t\t</Cell>\n\t\t\t<Cell left={x[3]} top={y[0]} width={colWidths[3]} height={rowHeights[0]} />\n\t\t\t<Cell left={x[4]} top={y[0]} width={colWidths[4]} height={rowHeights[0]}>\n\t\t\t\t<div style={{display: 'flex', gap: 80, alignItems: 'center'}}>\n\t\t\t\t\t<IconWrap size={60} opacity={0.45}>\n\t\t\t\t\t\t<Icon icon=\"logos:slack-icon\" width={52} height={52} />\n\t\t\t\t\t</IconWrap>\n\t\t\t\t\t<IconWrap size={60} opacity={0.55}>\n\t\t\t\t\t\t<Icon icon=\"logos:google-icon\" width={54} height={54} />\n\t\t\t\t\t</IconWrap>\n\t\t\t\t</div>\n\t\t\t</Cell>\n\t\t\t<Cell left={x[5]} top={y[0]} width={colWidths[5]} height={rowHeights[0]} />\n\t\t\t<Cell left={x[6]} top={y[0]} width={colWidths[6]} height={rowHeights[0]} />\n\t\t\t<Cell left={x[7]} top={y[0]} width={colWidths[7]} height={rowHeights[0]} />\n\n\t\t\t<Cell left={x[0]} top={y[1]} width={colWidths[0]} height={rowHeights[1]}>\n\t\t\t\t<IconWrap size={64} opacity={0.35}>\n\t\t\t\t\t<Icon icon=\"logos:microsoft-outlook\" width={54} height={54} />\n\t\t\t\t</IconWrap>\n\t\t\t</Cell>\n\t\t\t<Cell left={x[1]} top={y[1]} width={colWidths[1]} height={rowHeights[1]}>\n\t\t\t\t<div style={{display: 'flex', gap: 80, alignItems: 'center'}}>\n\t\t\t\t\t<IconWrap size={58} opacity={0.33}>\n\t\t\t\t\t\t<Icon icon=\"logos:linkedin-icon\" width={50} height={50} />\n\t\t\t\t\t</IconWrap>\n\t\t\t\t\t<IconWrap size={72} opacity={0.42}>\n\t\t\t\t\t\t<Icon icon=\"logos:telegram\" width={66} height={66} />\n\t\t\t\t\t</IconWrap>\n\t\t\t\t</div>\n\t\t\t</Cell>\n\t\t\t<Cell left={x[2]} top={y[1]} width={colWidths[2]} height={rowHeights[1]} />\n\t\t\t<Cell left={x[3]} top={y[1]} width={colWidths[3]} height={rowHeights[1]}>\n\t\t\t\t<div style={{opacity: 0.95}}>\n\t\t\t\t\t<FaceLogo />\n\t\t\t\t</div>\n\t\t\t</Cell>\n\t\t\t<Cell left={x[4]} top={y[1]} width={colWidths[4]} height={rowHeights[1]}>\n\t\t\t\t<div style={{display: 'flex', gap: 72, alignItems: 'center'}}>\n\t\t\t\t\t<IconWrap size={60} opacity={0.42}>\n\t\t\t\t\t\t<Icon icon=\"simple-icons:calendly\" width={48} height={48} color=\"#77cddd\" />\n\t\t\t\t\t</IconWrap>\n\t\t\t\t\t<IconWrap size={60} opacity={0.5}>\n\t\t\t\t\t\t<Icon icon=\"simple-icons:airtable\" width={50} height={50} color=\"#f29b3d\" />\n\t\t\t\t\t</IconWrap>\n\t\t\t\t</div>\n\t\t\t</Cell>\n\t\t\t<Cell left={x[5]} top={y[1]} width={colWidths[5]} height={rowHeights[1]}>\n\t\t\t\t<IconWrap size={54} opacity={0.42}>\n\t\t\t\t\t<Icon icon=\"logos:clickup-icon\" width={42} height={42} />\n\t\t\t\t</IconWrap>\n\t\t\t</Cell>\n\t\t\t<Cell left={x[6]} top={y[1]} width={colWidths[6]} height={rowHeights[1]} />\n\t\t\t<Cell left={x[7]} top={y[1]} width={colWidths[7]} height={rowHeights[1]} />\n\n\t\t\t<Cell left={x[0]} top={y[2]} width={colWidths[0]} height={rowHeights[2]}>\n\t\t\t\t<IconWrap size={64} opacity={0.28}>\n\t\t\t\t\t<Icon icon=\"simple-icons:notion\" width={50} height={50} color=\"#3b3b3b\" />\n\t\t\t\t</IconWrap>\n\t\t\t</Cell>\n\t\t\t<Cell left={x[1]} top={y[2]} width={colWidths[1]} height={rowHeights[2]}>\n\t\t\t\t<div style={{display: 'flex', gap: 92, alignItems: 'center'}}>\n\t\t\t\t\t<IconWrap size={62} opacity={0.3}>\n\t\t\t\t\t\t<Icon icon=\"mdi:github\" width={48} height={48} color=\"#3d3d3d\" />\n\t\t\t\t\t</IconWrap>\n\t\t\t\t\t<IconWrap size={58} opacity={0.45}>\n\t\t\t\t\t\t<Icon icon=\"logos:discord-icon\" width={48} height={48} />\n\t\t\t\t\t</IconWrap>\n\t\t\t\t</div>\n\t\t\t</Cell>\n\t\t\t<Cell left={x[2]} top={y[2]} width={colWidths[2]} height={rowHeights[2]} />\n\t\t\t<Cell left={x[3]} top={y[2]} width={colWidths[3]} height={rowHeights[2]} />\n\t\t\t<Cell left={x[4]} top={y[2]} width={colWidths[4]} height={rowHeights[2]}>\n\t\t\t\t<div style={{display: 'flex', gap: 78, alignItems: 'center'}}>\n\t\t\t\t\t<IconWrap size={60} opacity={0.55}>\n\t\t\t\t\t\t<Icon icon=\"logos:youtube-icon\" width={58} height={58} />\n\t\t\t\t\t</IconWrap>\n\t\t\t\t\t<IconWrap size={58} opacity={0.42}>\n\t\t\t\t\t\t<Icon icon=\"logos:trello\" width={52} height={52} />\n\t\t\t\t\t</IconWrap>\n\t\t\t\t</div>\n\t\t\t</Cell>\n\t\t\t<Cell left={x[5]} top={y[2]} width={colWidths[5]} height={rowHeights[2]}>\n\t\t\t\t<IconWrap size={58} opacity={0.3}>\n\t\t\t\t\t<Icon icon=\"vscode-icons:file-type-excel\" width={48} height={48} />\n\t\t\t\t</IconWrap>\n\t\t\t</Cell>\n\t\t\t<Cell left={x[6]} top={y[2]} width={colWidths[6]} height={rowHeights[2]} />\n\t\t\t<Cell left={x[7]} top={y[2]} width={colWidths[7]} height={rowHeights[2]} />\n\n\t\t\t<Cell left={x[0]} top={y[3]} width={colWidths[0]} height={rowHeights[3]} />\n\t\t\t<Cell left={x[1]} top={y[3]} width={colWidths[1]} height={rowHeights[3]}>\n\t\t\t\t<IconWrap size={60} opacity={0.52}>\n\t\t\t\t\t<Icon icon=\"logos:monday-icon\" width={50} height={50} />\n\t\t\t\t</IconWrap>\n\t\t\t</Cell>\n\t\t\t<Cell left={x[2]} top={y[3]} width={colWidths[2]} height={rowHeights[3]}>\n\t\t\t\t<IconWrap size={76} opacity={0.35}>\n\t\t\t\t\t<Icon icon=\"logos:zoho\" width={64} height={32} />\n\t\t\t\t</IconWrap>\n\t\t\t</Cell>\n\t\t\t<Cell left={x[3]} top={y[3]} width={colWidths[3]} height={rowHeights[3]}>\n\t\t\t\t<IconWrap size={56} opacity={0.28}>\n\t\t\t\t\t<Icon icon=\"logos:salesforce\" width={52} height={40} />\n\t\t\t\t</IconWrap>\n\t\t\t</Cell>\n\t\t\t<Cell left={x[4]} top={y[3]} width={colWidths[4]} height={rowHeights[3]}>\n\t\t\t\t<IconWrap size={88} opacity={0.45}>\n\t\t\t\t\t<Icon icon=\"logos:hubspot\" width={70} height={70} />\n\t\t\t\t</IconWrap>\n\t\t\t</Cell>\n\t\t\t<Cell left={x[5]} top={y[3]} width={colWidths[5]} height={rowHeights[3]} />\n\t\t\t<Cell left={x[6]} top={y[3]} width={colWidths[6]} height={rowHeights[3]} />\n\t\t\t<Cell left={x[7]} top={y[3]} width={colWidths[7]} height={rowHeights[3]} />\n\t\t</AbsoluteFill>\n\t);\n};",
+          "imageUrl": "https://raw.githubusercontent.com/renatgabitov/make-an-demo-video-of-our-202604081621/main/uploads/1775636511725-41ad9c19/asset-1.png",
+          "thumbnailUrl": "https://raw.githubusercontent.com/renatgabitov/make-an-demo-video-of-our-202604081621/main/uploads/1775636511725-41ad9c19/asset-1.png"
+        }
+      ]
+    },
+    {
+      "id": "assistant-status-1775636557925-0fyx14",
+      "role": "assistant",
+      "content": "✨ Resolving scene context",
+      "timestamp": 1775636557925,
+      "metadata": {
+        "streamEvent": {
+          "type": "phase.start",
+          "phase": "generating",
+          "kind": "info"
+        }
+      }
+    },
+    {
+      "id": "assistant-status-1775636558445-amv8kc",
+      "role": "assistant",
+      "content": "✨ Calling OpenAI generation",
+      "timestamp": 1775636558445,
+      "metadata": {
+        "streamEvent": {
+          "type": "phase.start",
+          "phase": "generating",
+          "kind": "info"
+        }
+      }
+    },
+    {
+      "id": "assistant-status-1775636558445-abrv8v",
+      "role": "assistant",
+      "content": "✨ Planning scenes",
+      "timestamp": 1775636558445,
+      "metadata": {
+        "streamEvent": {
+          "type": "phase.start",
+          "phase": "planning",
+          "kind": "info"
+        }
+      }
+    },
+    {
+      "id": "assistant-status-1775636558445-4mip6j",
+      "role": "assistant",
+      "content": "✨ Planning scenes...",
+      "timestamp": 1775636558445,
+      "metadata": {
+        "streamEvent": {
+          "type": "phase.start",
+          "phase": "generating",
+          "kind": "info"
+        }
+      }
+    }
+  ],
+  "appliedRequestIds": [
+    "https://github.com/renatgabitov/make-an-demo-video-of-our-202604081621.git::main:1775636559270:geih2e"
+  ],
+  "updatedAt": "2026-04-08T08:22:39.934Z"
+}
