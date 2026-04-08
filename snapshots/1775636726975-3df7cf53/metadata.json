@@ -1,0 +1,84 @@
+{
+  "projectName": "make-an-demo-video-of-our-202604081621",
+  "prompt": "Make an demo video of our new AI Workflow builder feature. Show Text “Introducing The AI Workflow Builder”\n\nMake it two scenes: one text, and one with screenshot.\n\n--- TEMPLATE STEERING ---\nMaintain professional motion-design quality and clear visual hierarchy.\nKeep text readable at all times with safe contrast and spacing.\nAvoid clutter; use deliberate pacing and polished transitions.\nTemplate mode: ai-workflow-builder.\nDefault template baseline: prioritize graphics-design framing over website/dashboard layout, keep the hero block dominant (roughly 40-75% width), and keep headline typography oversized (roughly 8-16% frame height).\nUse a deterministic two-scene workflow-builder narrative with strong text hierarchy.\nScene 1 should read as bold kinetic typography, not dashboard chrome.\nScene 2 should focus on UI interaction storytelling with subtle movement and clear focal targets.\nKeep animations precise, render-safe, and free of noisy decorative effects.\nLarge typography is mandatory: hero headline should be roughly 10-16% of frame height with strong width occupancy; avoid small text in primary beats.\nKeep supporting copy secondary; primary beats must be driven by oversized title lockups rather than dense paragraph text.\nFavor deterministic, render-safe scene composition over excessive complexity.\nShow this exact hero text as a dominant readable lockup: Introducing The AI Workflow Builder.\nScene 1 must animate zoom-out text beats in exact order: Hiring sucks, Managing sucks, Scaling sucks -> Scaling sucked.\nIn Scene 1, the '(ed)' emphasis on 'sucked' must be visibly circled as a graphic annotation while keeping text readability high.\nScene 2 must transpile the attached image component, preserve its key text-field/send-button semantics, then animate a floating cursor moving toward the send button.\nIf a screenshot seed or component reference is present, treat it as the authoritative workflow-builder showcase source in Scene 2.\nScene 2 camera should add a slight incremental zoom-in over time while cursor motion stays smooth and deterministic.\n\n--- SCENERY DIRECTIVES ---\nGlobal scenery mood: soft, neutral.\nMotion profile: calm.\nScene 1 @0f for 90f: clean gradient backdrop, camera none, transition fade.\n\n--- HARDCODED IMPLEMENTATION ---\nImplementation id: ai-workflow-builder\nThis request uses the AI Workflow Builder hardcoded flow.\nOutput exactly 2 scenes.\nUse exact on-screen text: Introducing The AI Workflow Builder.\nScene 1 must animate zoom-out text beats in order: Hiring sucks, Managing sucks, Scaling sucks -> Scaling sucked, and emphasize a circled (ed).\nScene 2 must feature the AI Workflow Builder interface narrative and keep motion deterministic/render-safe.\nScene 2 must transpile the attached image component, treat the provided screenshot/component reference as authoritative workflow-builder UI source, then animate a floating cursor toward the send button with a slight incremental zoom.\n\n--- OUTPUT CONTRACT ---\nReturn strict JSON only (no markdown, no prose) in this exact shape:\n{ \"scene_envelope\": { \"mode\": \"replace_timeline|append_scene|edit_selected_scene\", \"scenes\": [ { \"id\": string, \"name\": string, \"code\": string?, \"base_code_ref\": string?, \"code_extensions\": { \"imports\": string?, \"setup\": string?, \"jsx\": string? }?, \"duration_in_frames\": number, \"created_at\": number, \"updated_at\": number } ], \"selected_scene_id\": string?, \"summary\": string? }, \"transition_program\": { \"version\": \"1\", \"quality_tier\": \"cinematic|dynamic|minimal\", \"handoffs\": [ { \"from_scene_id\": string, \"to_scene_id\": string, \"duration_in_frames\": number, \"blend_mode\": \"normal|screen|overlay|multiply|soft-light|hard-light\", \"anchor_policy\": \"preserve-subject|center-weighted|edge-biased\", \"intensity_profile\": \"ease-in|ease-out|ease-in-out|pulse\", \"layers\": [ { \"stage\": \"pre-warp|frequency|color|light|matte|blend\", \"preset\": string, \"intensity\": number, \"params\": object? } ] } ] } }\nUse mode: replace_timeline.\nEach scene must remain production-safe TSX with imports and a default export.\nNo baseline scaffold is available: emit full `scene.code` for each scene.\nDo not reference browser globals or DOM APIs; keep all logic render-safe and deterministic.\nMotion language is mandatory: include transition_program handoffs for every adjacent scene pair.\nFor animation generation, produce exactly 2 scenes per timeline.\nEach scene should target 2-3 seconds (60-90 frames at 30fps).\nTransition durations must stay within 12-24 frames at 30fps for snappy pacing.\nFavor active camera/layer movement, bold readable hierarchy, and deterministic render performance.\nAvoid heavy render patterns such as huge blur radii, large repeated layer arrays, or excessive shadow stacks.\nThe opening beat must reveal a clear focal element within the first 6 frames.\nKeep the final ~20 frames stable with minimal motion around the closing lockup.",
+  "summary": "Generated a 2-scene timeline through two-phase orchestration.",
+  "timestamp": 1775636726975,
+  "model": "gpt-5.4",
+  "skills": [],
+  "attachedImageUrls": [
+    "https://raw.githubusercontent.com/renatgabitov/make-an-demo-video-of-our-202604081621/main/uploads/1775636511725-41ad9c19/asset-1.png"
+  ],
+  "fontFamily": "Inter, sans-serif",
+  "format": "landscape",
+  "templateId": "ai-workflow-builder",
+  "scenes": [
+    {
+      "id": "scene_01",
+      "name": "Title Reveal",
+      "durationInFrames": 72,
+      "createdAt": 1775636726847,
+      "updatedAt": 1775636726847
+    },
+    {
+      "id": "scene_02",
+      "name": "Transpiled Workflow Showcase",
+      "durationInFrames": 90,
+      "createdAt": 1775636726885,
+      "updatedAt": 1775636726885
+    }
+  ],
+  "selectedSceneId": "scene_01",
+  "selectedChatSceneId": "scene_01",
+  "sceneCommitIndexById": {
+    "scene_01": [
+      {
+        "snapshotId": "1775636726975-3df7cf53",
+        "commitName": "generation: Generated a 2-scene timeline through two-phase orchestration.",
+        "summary": "Generated a 2-scene timeline through two-phase orchestration.",
+        "timestamp": 1775636726975,
+        "savedAtIso": "2026-04-08T08:25:27.404Z"
+      }
+    ],
+    "scene_02": []
+  },
+  "transitionProgram": {
+    "version": "1",
+    "qualityTier": "dynamic",
+    "handoffs": [
+      {
+        "fromSceneId": "scene_01",
+        "toSceneId": "scene_02",
+        "durationInFrames": 14,
+        "layers": [
+          {
+            "stage": "frequency",
+            "preset": "motion",
+            "intensity": 0.3
+          },
+          {
+            "stage": "pre-warp",
+            "preset": "zoom",
+            "intensity": 0.24
+          },
+          {
+            "stage": "frequency",
+            "preset": "gaussian",
+            "intensity": 0.26
+          }
+        ],
+        "blendMode": "screen",
+        "anchorPolicy": "preserve-subject",
+        "intensityProfile": "ease-in-out"
+      }
+    ]
+  },
+  "sceneChatsById": {
+    "scene_01": [],
+    "scene_02": []
+  },
+  "sceneFormatVersion": 2,
+  "snapshotId": "1775636726975-3df7cf53",
+  "commitName": "generation: Generated a 2-scene timeline through two-phase orchestration.",
+  "assetPaths": [],
+  "savedAtIso": "2026-04-08T08:25:27.404Z"
+}
